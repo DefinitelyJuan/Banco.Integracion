@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOVLbkK7AcEyrOiHacx7sUQAAAAACAAAAAAAQZgAAAAEAACAAAABMVyMwANBvrJKx7XIuHMLPOXQzK8HjY3kSOh+cjEY/9gAAAAAOgAAAAAIAACAAAADjCxNYj1xjqj+qy0U9J7hnfpx+JzIl4qxVoqikEEQtICAAAAAn3jUX/AXm9KcR2QcGPllkfxNOB2ZvN1+l+WZKi3rDSEAAAABWSKp95HZFF4Kv7Af86OYIhpV7s8/OH3ut2pb0LtjdRO1PvFE6SIMoQyajFXzYOas/sRJ4fguARygT1IY+Vgku</EncryptedPassword>
+    <_PublishTargetUrl>ftp://integracion.somee.com/www.integracion.somee.com</_PublishTargetUrl>
+    <History>True|2022-04-15T03:31:21.9564679Z;True|2022-04-14T23:15:19.1846781-04:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Integracion.dll">
+      <publishTime>04/14/2022 23:29:46</publishTime>
+    </File>
+    <File Include="bin/Integracion.pdb">
+      <publishTime>04/14/2022 23:29:46</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>08/07/2020 17:52:58</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>05/18/2020 21:51:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>05/18/2020 21:51:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>05/18/2020 21:40:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>05/18/2020 21:52:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>05/18/2020 21:52:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>05/18/2020 21:40:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>05/18/2020 21:47:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>05/18/2020 21:51:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>05/18/2020 21:51:58</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>05/18/2020 21:49:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>05/18/2020 21:49:32</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>05/18/2020 21:50:04</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>05/18/2020 21:40:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>04/12/2017 21:36:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>04/12/2017 21:36:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
+      <publishTime>05/18/2020 21:40:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>05/18/2020 21:40:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Buffers.dll">
+      <publishTime>07/19/2017 13:01:28</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>05/15/2018 16:29:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Memory.dll">
+      <publishTime>04/17/2019 19:24:34</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Numerics.Vectors.dll">
+      <publishTime>07/19/2017 13:01:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>05/15/2018 16:29:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Runtime.CompilerServices.Unsafe.dll">
+      <publishTime>11/15/2019 12:37:58</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>11/29/2018 19:39:18</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Tasks.Extensions.dll">
+      <publishTime>06/18/2019 15:08:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>05/18/2020 21:50:06</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>05/18/2020 21:50:06</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>05/18/2020 21:40:26</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>05/18/2020 21:52:02</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>05/18/2020 21:52:02</publishTime>
+    </File>
+    <File Include="IntegracionASMX.asmx">
+      <publishTime>04/14/2022 22:46:37</publishTime>
+    </File>
+    <File Include="Properties/DataSources/System.Data.DataSet.datasource">
+      <publishTime>04/14/2022 22:46:37</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/14/2022 23:13:17</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

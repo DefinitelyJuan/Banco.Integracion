@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://CoreAplicacion.somee.com" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://CoreAplicacion.somee.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://CoreAplicacion.somee.com">
+      <s:element name="Autenticacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contraseña" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pin" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutenticacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutenticacionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Transaccion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID_TipoTransaccion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DbCr" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comentario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="NoCuenta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransaccionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TransaccionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerTodasCuentasDiferentes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID_Cliente" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerTodasCuentasDiferentesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerTodasCuentasDiferentesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransaccionATercero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NoCuenta" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Entidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_TipoEntidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID_TipoTransaccion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DbCr" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comentario" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransaccionATerceroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TransaccionATerceroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AutenticacionSoapIn">
+    <wsdl:part name="parameters" element="tns:Autenticacion" />
+  </wsdl:message>
+  <wsdl:message name="AutenticacionSoapOut">
+    <wsdl:part name="parameters" element="tns:AutenticacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransaccionSoapIn">
+    <wsdl:part name="parameters" element="tns:Transaccion" />
+  </wsdl:message>
+  <wsdl:message name="TransaccionSoapOut">
+    <wsdl:part name="parameters" element="tns:TransaccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTodasCuentasDiferentesSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerTodasCuentasDiferentes" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTodasCuentasDiferentesSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerTodasCuentasDiferentesResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransaccionATerceroSoapIn">
+    <wsdl:part name="parameters" element="tns:TransaccionATercero" />
+  </wsdl:message>
+  <wsdl:message name="TransaccionATerceroSoapOut">
+    <wsdl:part name="parameters" element="tns:TransaccionATerceroResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CoreSoap">
+    <wsdl:operation name="Autenticacion">
+      <wsdl:input message="tns:AutenticacionSoapIn" />
+      <wsdl:output message="tns:AutenticacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Transaccion">
+      <wsdl:input message="tns:TransaccionSoapIn" />
+      <wsdl:output message="tns:TransaccionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodasCuentasDiferentes">
+      <wsdl:input message="tns:ObtenerTodasCuentasDiferentesSoapIn" />
+      <wsdl:output message="tns:ObtenerTodasCuentasDiferentesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TransaccionATercero">
+      <wsdl:input message="tns:TransaccionATerceroSoapIn" />
+      <wsdl:output message="tns:TransaccionATerceroSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CoreSoap" type="tns:CoreSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Autenticacion">
+      <soap:operation soapAction="http://CoreAplicacion.somee.com/Autenticacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transaccion">
+      <soap:operation soapAction="http://CoreAplicacion.somee.com/Transaccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodasCuentasDiferentes">
+      <soap:operation soapAction="http://CoreAplicacion.somee.com/ObtenerTodasCuentasDiferentes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransaccionATercero">
+      <soap:operation soapAction="http://CoreAplicacion.somee.com/TransaccionATercero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CoreSoap12" type="tns:CoreSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Autenticacion">
+      <soap12:operation soapAction="http://CoreAplicacion.somee.com/Autenticacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transaccion">
+      <soap12:operation soapAction="http://CoreAplicacion.somee.com/Transaccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodasCuentasDiferentes">
+      <soap12:operation soapAction="http://CoreAplicacion.somee.com/ObtenerTodasCuentasDiferentes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransaccionATercero">
+      <soap12:operation soapAction="http://CoreAplicacion.somee.com/TransaccionATercero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Core">
+    <wsdl:port name="CoreSoap" binding="tns:CoreSoap">
+      <soap:address location="http://coreaplicacion.somee.com/Core.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CoreSoap12" binding="tns:CoreSoap12">
+      <soap12:address location="http://coreaplicacion.somee.com/Core.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

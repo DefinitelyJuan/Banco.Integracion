@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://coreaplicacion.somee.com/Core.asmx?wsdl" docRef="http://coreaplicacion.somee.com/Core.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://coreaplicacion.somee.com/Core.asmx" xmlns:q1="http://CoreAplicacion.somee.com" binding="q1:CoreSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://coreaplicacion.somee.com/Core.asmx" xmlns:q2="http://CoreAplicacion.somee.com" binding="q2:CoreSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>
