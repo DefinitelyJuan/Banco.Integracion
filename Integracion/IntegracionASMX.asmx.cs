@@ -18,14 +18,18 @@ namespace Integracion
     [System.Web.Script.Services.ScriptService]
     public class IntegracionASMX : System.Web.Services.WebService
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         [WebMethod]
         public DataSet Autenticacion(string usuario, string contraseña, int pin, string clave)
         {
             DataSet empty = null;
             if (clave == "Droog ethereal develop 269138")
             {
+                log.Info($"Iniciando solicitud de autenticacion para el usuario {usuario}");
                 CoreSoapClient core = new CoreSoapClient();
                 DataSet auth = core.Autenticacion(usuario, contraseña, pin, clave);
+                log.Info("Proceso completado, enviando dataset de respuesta...");
                 return auth;
             }
             else
@@ -40,8 +44,10 @@ namespace Integracion
             DataSet empty = null;
             if (clave == "Droog ethereal develop 269138")
             {
+                log.Info($"Iniciando solicitud de transaccion para la cuenta {NoCuenta} con monto {Monto}");
                 CoreSoapClient core = new CoreSoapClient();
                 DataSet dataset = core.Transaccion(ID_TipoTransaccion, DbCr, Comentario, NoCuenta, Monto, clave);
+                log.Info($"Proceso completado, enviando dataset de respuesta...");
                 return dataset;
             }
             else
@@ -57,8 +63,10 @@ namespace Integracion
             DataSet empty = null;
             if (clave == "Droog ethereal develop 269138")
             {
+                log.Info($"Iniciando solicitud de obtener todas las cuentas que no pertenecen al cliente de id {ID_Cliente}");
                 CoreSoapClient core = new CoreSoapClient();
                 DataSet dataset = core.ObtenerTodasCuentasDiferentes(ID_Cliente, clave);
+                log.Info($"Proceso completado, enviando dataset de respuesta...");
                 return dataset;
             }
             else
@@ -73,8 +81,10 @@ namespace Integracion
             DataSet empty = null;
             if (clave == "Droog ethereal develop 269138")
             {
+                log.Info($"Iniciando transaccion a tercero: origen {NoCuenta}, destinatario {Entidad} y monto {Monto}");
                 CoreSoapClient core = new CoreSoapClient();
                 DataSet dataset = core.TransaccionATercero(NoCuenta, Entidad, ID_TipoEntidad, ID_TipoTransaccion, DbCr, Comentario, Monto, clave);
+                log.Info($"Proceso completado, enviando dataset de respuesta...");
                 return dataset;
             }
             else
@@ -84,14 +94,25 @@ namespace Integracion
         }
 
         [WebMethod]
-        public bool InsertarBeneficiario(int ID_Beneficiario, int NoCuenta, int ID_TipoBeneficiario, string Nombre, int ID_Cliente, string clave)
+        public bool InsertarBeneficiario(int NoCuenta, int ID_TipoBeneficiario, string Nombre, int ID_Cliente, string clave)
         {
             bool response = false;
             if (clave == "Droog ethereal develop 269138")
             {
-                CoreSoapClient core = new CoreSoapClient();
-                core.InsertarBeneficiario(ID_Beneficiario, NoCuenta, ID_TipoBeneficiario, Nombre, ID_Cliente, clave);
-                return response;
+                try
+                {
+                    log.Info($"Iniciando solicitud para insertar el beneficiario de nombre {Nombre} para la cuenta {NoCuenta}");
+                    CoreSoapClient core = new CoreSoapClient();
+                    core.InsertarBeneficiario(NoCuenta, ID_TipoBeneficiario, Nombre, ID_Cliente, clave);
+                    log.Info($"Proceso completado, enviando dataset de respuesta...");
+                    return response;
+                }
+                catch (Exception err)
+                {
+                    log.Error(err.Message);
+                    return response;
+                }
+
             }
             else
             {

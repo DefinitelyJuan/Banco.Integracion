@@ -78,3 +78,6 @@ C:\Users\moroc\source\repos\IntegracionBanco\Integracion\obj\Release\Integracion
 C:\Users\moroc\source\repos\IntegracionBanco\Integracion\obj\Release\Integracion.csproj.CopyComplete
 C:\Users\moroc\source\repos\IntegracionBanco\Integracion\obj\Release\Integracion.dll
 C:\Users\moroc\source\repos\IntegracionBanco\Integracion\obj\Release\Integracion.pdb
+C:\Users\moroc\source\repos\IntegracionBanco\Integracion\bin\log4net.config
+C:\Users\moroc\source\repos\IntegracionBanco\Integracion\bin\log4net.dll
+C:\Users\moroc\source\repos\IntegracionBanco\Integracion\bin\log4net.xml

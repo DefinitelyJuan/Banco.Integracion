@@ -102,39 +102,9 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="InsertarCliente">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="tns:ClienteClase" />
-            <s:element minOccurs="0" maxOccurs="1" name="clave" type="s:string" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:complexType name="ClienteClase">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="IDCliente" type="s:int" />
-          <s:element minOccurs="0" maxOccurs="1" name="Cedula_Cliente" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="Nombre_Cliente" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="Direccion_Cliente" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="Sexo" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="FechaNacimiento" type="s:dateTime" />
-          <s:element minOccurs="1" maxOccurs="1" name="IDProvincia" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="IDMunicipio" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="IDSector" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="IngresosMensuales" type="s:int" />
-        </s:sequence>
-      </s:complexType>
-      <s:element name="InsertarClienteResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="InsertarClienteResult" type="s:boolean" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
       <s:element name="InsertarBeneficiario">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="ID_Beneficiario" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="NoCuenta" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="ID_TipoBeneficiario" type="s:int" />
             <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
@@ -176,12 +146,6 @@
   <wsdl:message name="TransaccionATerceroSoapOut">
     <wsdl:part name="parameters" element="tns:TransaccionATerceroResponse" />
   </wsdl:message>
-  <wsdl:message name="InsertarClienteSoapIn">
-    <wsdl:part name="parameters" element="tns:InsertarCliente" />
-  </wsdl:message>
-  <wsdl:message name="InsertarClienteSoapOut">
-    <wsdl:part name="parameters" element="tns:InsertarClienteResponse" />
-  </wsdl:message>
   <wsdl:message name="InsertarBeneficiarioSoapIn">
     <wsdl:part name="parameters" element="tns:InsertarBeneficiario" />
   </wsdl:message>
@@ -204,10 +168,6 @@
     <wsdl:operation name="TransaccionATercero">
       <wsdl:input message="tns:TransaccionATerceroSoapIn" />
       <wsdl:output message="tns:TransaccionATerceroSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="InsertarCliente">
-      <wsdl:input message="tns:InsertarClienteSoapIn" />
-      <wsdl:output message="tns:InsertarClienteSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="InsertarBeneficiario">
       <wsdl:input message="tns:InsertarBeneficiarioSoapIn" />
@@ -245,15 +205,6 @@
     </wsdl:operation>
     <wsdl:operation name="TransaccionATercero">
       <soap:operation soapAction="http://CoreAplicacion.somee.com/TransaccionATercero" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="InsertarCliente">
-      <soap:operation soapAction="http://CoreAplicacion.somee.com/InsertarCliente" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -302,15 +253,6 @@
     </wsdl:operation>
     <wsdl:operation name="TransaccionATercero">
       <soap12:operation soapAction="http://CoreAplicacion.somee.com/TransaccionATercero" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="InsertarCliente">
-      <soap12:operation soapAction="http://CoreAplicacion.somee.com/InsertarCliente" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

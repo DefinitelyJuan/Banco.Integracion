@@ -44,177 +44,12 @@ namespace Integracion.CoreAplicacion {
         [System.ServiceModel.OperationContractAttribute(Action="http://CoreAplicacion.somee.com/TransaccionATercero", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> TransaccionATerceroAsync(int NoCuenta, int Entidad, int ID_TipoEntidad, int ID_TipoTransaccion, int DbCr, string Comentario, decimal Monto, string clave);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://CoreAplicacion.somee.com/InsertarCliente", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        bool InsertarCliente(Integracion.CoreAplicacion.ClienteClase cliente, string clave);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://CoreAplicacion.somee.com/InsertarCliente", ReplyAction="*")]
-        System.Threading.Tasks.Task<bool> InsertarClienteAsync(Integracion.CoreAplicacion.ClienteClase cliente, string clave);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://CoreAplicacion.somee.com/InsertarBeneficiario", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        bool InsertarBeneficiario(int ID_Beneficiario, int NoCuenta, int ID_TipoBeneficiario, string Nombre, int ID_Cliente, string clave);
+        bool InsertarBeneficiario(int NoCuenta, int ID_TipoBeneficiario, string Nombre, int ID_Cliente, string clave);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://CoreAplicacion.somee.com/InsertarBeneficiario", ReplyAction="*")]
-        System.Threading.Tasks.Task<bool> InsertarBeneficiarioAsync(int ID_Beneficiario, int NoCuenta, int ID_TipoBeneficiario, string Nombre, int ID_Cliente, string clave);
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://CoreAplicacion.somee.com")]
-    public partial class ClienteClase : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int iDClienteField;
-        
-        private string cedula_ClienteField;
-        
-        private string nombre_ClienteField;
-        
-        private string direccion_ClienteField;
-        
-        private string sexoField;
-        
-        private System.DateTime fechaNacimientoField;
-        
-        private int iDProvinciaField;
-        
-        private int iDMunicipioField;
-        
-        private int iDSectorField;
-        
-        private int ingresosMensualesField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
-        public int IDCliente {
-            get {
-                return this.iDClienteField;
-            }
-            set {
-                this.iDClienteField = value;
-                this.RaisePropertyChanged("IDCliente");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
-        public string Cedula_Cliente {
-            get {
-                return this.cedula_ClienteField;
-            }
-            set {
-                this.cedula_ClienteField = value;
-                this.RaisePropertyChanged("Cedula_Cliente");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
-        public string Nombre_Cliente {
-            get {
-                return this.nombre_ClienteField;
-            }
-            set {
-                this.nombre_ClienteField = value;
-                this.RaisePropertyChanged("Nombre_Cliente");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
-        public string Direccion_Cliente {
-            get {
-                return this.direccion_ClienteField;
-            }
-            set {
-                this.direccion_ClienteField = value;
-                this.RaisePropertyChanged("Direccion_Cliente");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
-        public string Sexo {
-            get {
-                return this.sexoField;
-            }
-            set {
-                this.sexoField = value;
-                this.RaisePropertyChanged("Sexo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
-        public System.DateTime FechaNacimiento {
-            get {
-                return this.fechaNacimientoField;
-            }
-            set {
-                this.fechaNacimientoField = value;
-                this.RaisePropertyChanged("FechaNacimiento");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
-        public int IDProvincia {
-            get {
-                return this.iDProvinciaField;
-            }
-            set {
-                this.iDProvinciaField = value;
-                this.RaisePropertyChanged("IDProvincia");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=7)]
-        public int IDMunicipio {
-            get {
-                return this.iDMunicipioField;
-            }
-            set {
-                this.iDMunicipioField = value;
-                this.RaisePropertyChanged("IDMunicipio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=8)]
-        public int IDSector {
-            get {
-                return this.iDSectorField;
-            }
-            set {
-                this.iDSectorField = value;
-                this.RaisePropertyChanged("IDSector");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Order=9)]
-        public int IngresosMensuales {
-            get {
-                return this.ingresosMensualesField;
-            }
-            set {
-                this.ingresosMensualesField = value;
-                this.RaisePropertyChanged("IngresosMensuales");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
+        System.Threading.Tasks.Task<bool> InsertarBeneficiarioAsync(int NoCuenta, int ID_TipoBeneficiario, string Nombre, int ID_Cliente, string clave);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -276,20 +111,12 @@ namespace Integracion.CoreAplicacion {
             return base.Channel.TransaccionATerceroAsync(NoCuenta, Entidad, ID_TipoEntidad, ID_TipoTransaccion, DbCr, Comentario, Monto, clave);
         }
         
-        public bool InsertarCliente(Integracion.CoreAplicacion.ClienteClase cliente, string clave) {
-            return base.Channel.InsertarCliente(cliente, clave);
+        public bool InsertarBeneficiario(int NoCuenta, int ID_TipoBeneficiario, string Nombre, int ID_Cliente, string clave) {
+            return base.Channel.InsertarBeneficiario(NoCuenta, ID_TipoBeneficiario, Nombre, ID_Cliente, clave);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertarClienteAsync(Integracion.CoreAplicacion.ClienteClase cliente, string clave) {
-            return base.Channel.InsertarClienteAsync(cliente, clave);
-        }
-        
-        public bool InsertarBeneficiario(int ID_Beneficiario, int NoCuenta, int ID_TipoBeneficiario, string Nombre, int ID_Cliente, string clave) {
-            return base.Channel.InsertarBeneficiario(ID_Beneficiario, NoCuenta, ID_TipoBeneficiario, Nombre, ID_Cliente, clave);
-        }
-        
-        public System.Threading.Tasks.Task<bool> InsertarBeneficiarioAsync(int ID_Beneficiario, int NoCuenta, int ID_TipoBeneficiario, string Nombre, int ID_Cliente, string clave) {
-            return base.Channel.InsertarBeneficiarioAsync(ID_Beneficiario, NoCuenta, ID_TipoBeneficiario, Nombre, ID_Cliente, clave);
+        public System.Threading.Tasks.Task<bool> InsertarBeneficiarioAsync(int NoCuenta, int ID_TipoBeneficiario, string Nombre, int ID_Cliente, string clave) {
+            return base.Channel.InsertarBeneficiarioAsync(NoCuenta, ID_TipoBeneficiario, Nombre, ID_Cliente, clave);
         }
     }
 }

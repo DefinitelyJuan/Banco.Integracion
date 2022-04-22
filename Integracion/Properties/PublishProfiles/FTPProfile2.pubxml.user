@@ -8,17 +8,23 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAOVLbkK7AcEyrOiHacx7sUQAAAAACAAAAAAAQZgAAAAEAACAAAAA7GJWGTahxZakZeeFM6GqPoV8voY4cz0g8ayGMfJUJOwAAAAAOgAAAAAIAACAAAABkGcEW5Qvr7bR006eO1kqBkyNc5dHgBRwuCg6N7GjPciAAAAAhsMWLw+NpOK2CygdS0gHGuVfiQkoEuk21tFejNqGk30AAAAAPK/ILgZHy5NHead4nuQEFLWTCTy55pCivwJLipY7+wJRuA/JrdzaqVG4snBhBkS8iQriyhUYZmlePIly5o3LT</EncryptedPassword>
     <_PublishTargetUrl>ftp://integracion.somee.com/www.integracion.somee.com</_PublishTargetUrl>
-    <History>True|2022-04-20T04:43:47.8391607Z;True|2022-04-16T02:54:46.2151803-04:00;</History>
+    <History>True|2022-04-22T21:13:19.7990562Z;True|2022-04-21T21:56:50.6891107-04:00;True|2022-04-21T21:17:08.3061352-04:00;True|2022-04-20T20:53:25.0088542-04:00;True|2022-04-20T18:59:43.0376690-04:00;True|2022-04-20T05:32:03.8387964-04:00;True|2022-04-20T04:14:23.2510788-04:00;True|2022-04-20T00:43:47.8391607-04:00;True|2022-04-16T02:54:46.2151803-04:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Integracion.dll">
-      <publishTime>04/20/2022 00:41:51</publishTime>
+      <publishTime>04/22/2022 17:11:23</publishTime>
     </File>
     <File Include="bin/Integracion.pdb">
-      <publishTime>04/20/2022 00:41:51</publishTime>
+      <publishTime>04/22/2022 17:11:23</publishTime>
+    </File>
+    <File Include="bin/log4net.config">
+      <publishTime>04/21/2022 21:12:07</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>12/17/2021 10:45:06</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>08/07/2020 17:52:58</publishTime>
+      <publishTime>07/08/2020 17:52:58</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>05/18/2020 21:51:56</publishTime>
@@ -60,10 +66,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>05/18/2020 21:40:20</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
-      <publishTime>04/12/2017 21:36:44</publishTime>
+      <publishTime>12/04/2017 21:36:44</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
-      <publishTime>04/12/2017 21:36:44</publishTime>
+      <publishTime>12/04/2017 21:36:44</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
       <publishTime>05/18/2020 21:40:20</publishTime>
@@ -113,11 +119,14 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     <File Include="IntegracionASMX.asmx">
       <publishTime>04/14/2022 22:46:37</publishTime>
     </File>
+    <File Include="log4net.config">
+      <publishTime>04/21/2022 21:12:07</publishTime>
+    </File>
     <File Include="Properties/DataSources/System.Data.DataSet.datasource">
       <publishTime>04/14/2022 22:46:37</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/16/2022 02:53:28</publishTime>
+      <publishTime>04/21/2022 21:55:34</publishTime>
     </File>
   </ItemGroup>
 </Project>
